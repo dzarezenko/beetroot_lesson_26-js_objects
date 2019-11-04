@@ -14,3 +14,6 @@ for (let key in person) {
 
   console.log(person[key]);
 }
+
+delete person.email;
+console.log(person);
