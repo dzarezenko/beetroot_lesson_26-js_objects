@@ -15,9 +15,13 @@ for (let key in person) {
   console.log(person[key]);
 }
 
-let nextPerson = person;
+//let nextPerson = {};
+/*for (let key in person) {
+  nextPerson[key] = person[key];
+}*/
+let nextPerson = Object.assign({a: "Test"}, person);
 console.log(nextPerson);
 
 delete person.email;
-console.log(person);
-console.log(nextPerson);
+console.log("Person", person);
+console.log("Next Person", nextPerson);
