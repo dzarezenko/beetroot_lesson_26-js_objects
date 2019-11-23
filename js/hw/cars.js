@@ -2,15 +2,21 @@ let car = {
   make: "Nissan",
   model: "dwkw",
   year: 2019,
-  speed: "100 км/час",
+  speed: 100.5,
+  speedPoints: "км/час",
 
   showInfo() {
+      this.speedStr = `${this.speed} ${this.speedPoints}`;
+
+      let carInfo = "";
+      // ...
+
       console.table(this); 
   },
 
   calcTime() {
       let l = +prompt("Введите расстояние (км)");
-      let t = l / parseInt(this.speed);
+      let t = l / this.speed;
       let timeHours = Math.floor(t);
       let timeMinutes = (t - timeHours) * 60;
       
