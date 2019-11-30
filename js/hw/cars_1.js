@@ -9,13 +9,13 @@
 let auto = {
   manufacturer: "Mercedes-Benz",
   model: "GLE SUV",
-  "year of manufacture": "2019 yaer",
-  "average speed": 200,
+  yearOfManufacture: "2019 year",
+  averageSpeed: 200,
   autoinfo: function () {
-      console.log(`${this.manufacturer} ${this["year of manufacture"]} "${this.model}"  ${this["average speed"]}`);
+      console.log(`${this.manufacturer} ${this.yearOfManufacture} "${this.model}"  ${this.averageSpeed}`);
   },
-  test: function(distances) {
-      let time = distances / this["average speed"]
+  getTime: function(distances) {
+      let time = distances / this.averageSpeed
       if (time>=4){
           let a = +(time / 4).toFixed(1)
           time = (time + a)
@@ -26,4 +26,4 @@ let auto = {
 }
 console.log(auto);
 auto.autoinfo();
-console.log(auto.test(1800));
+console.log(auto.getTime(1800));
